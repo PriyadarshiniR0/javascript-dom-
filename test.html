@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="inc">+</button>
+    <h1 id="count"></h1>
+    <button id="dec">-</button>
+    <script>
+        let incBtn=document.getElementById("inc")
+        let deccBtn=document.getElementById("dec")
+        let countTag=document.querySelector("#count")
+        //letisCount=localStorage.getItem("count")
+        //console.log(isCount);
+        
+        let count= localStorage.getItem("count")?localStorage.getItem("count"):0
+        localStorage.setItem("count",count)
+
+        countTag.innerHTML=count;
+        incBtn.addEventListener("click",()=>{
+            console.log("inc btn is clicked");
+            countTag.innerHTML=++count
+            localStorage.setItem("count",count)
+            
+        })
+        deccBtn.addEventListener("click",()=>{
+            console.log("dec btn is clicked");
+            countTag.innerHTML=--count
+            localStorage.setItem("count",count)
+            
+        })
+        console.log(this);
+        
+
+
+    </script>
+</body>
+</html>
