@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+        }
+        div{
+            background-color:antiquewhite;
+            color: blueviolet;
+            text-align: center;
+            padding: 20px;
+        }
+        div>button{
+            background-color:blue;
+            color: aquamarine;
+            outline: none;
+            border: none;
+            padding: 7px 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 id="display-message">Print Message</h2>
+        <button onclick="printMessage();">Click here</button>
+
+        <button id="btn-ele-1">Click Here</button>
+        <button id="btn-ele-2">Click Here</button>
+    </div>
+
+    <!-- Script Code -->
+    <script>
+        let displayTag=document.getElementById('display-message');
+        //inline Event handler
+
+        function printMessage(){
+            
+            displayTag.textContent="Hello World!!!";
+            displayTag.style.color="blue";
+        }
+
+        //handling Event by using Event Property 
+        
+        let clickBtn=document.getElementById('btn-ele-1');
+        clickBtn.onclick=function(){
+            displayTag.textContent="Good Morning!!!";
+            displayTag.style.color="black";
+
+        }
+        //Hamdling Event By using addEventListener() method
+            
+        let clickBtn_2=document.querySelector('#btn-ele-2');
+        clickBtn_2.addEventListener('click',function()
+        {
+            displayTag.textContent="Good Day!!!";
+            displayTag.style.color="aqua";
+
+        })
+    </script>
+
+</body>
+</html>

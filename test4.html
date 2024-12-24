@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+        }
+        div{
+            background-color:antiquewhite;
+            color: blueviolet;
+            text-align: center;
+            padding: 20px;
+        }
+        div>button{
+            background-color:blue;
+            color: aquamarine;
+            outline: none;
+            border: none;
+            padding: 7px 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 id="display-message">Print Message</h2>
+        <button onclick="printMessage();">Click here</button>
+
+        <button id="btn-ele">Click Here</button>
+    </div>
+
+    <!-- Script Code -->
+    <script>
+        let displayTag=document.getElementById('display-message');
+        //inline Event handler
+
+        function printMessage(){
+            
+            displayTag.textContent="Hello World!!!";
+            displayTag.style.color="blue";
+        }
+
+        //handling Event by using Event Property 
+        
+        let clickBtn=document.getElementById('btn-ele');
+        clickBtn.onclick=function(){
+            displayTag.textContent="Good Morning!!!";
+            displayTag.style.color="black";
+
+        }
+    </script>
+
+</body>
+</html>

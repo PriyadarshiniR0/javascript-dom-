@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+        }
+        div{
+            background-color:antiquewhite;
+            color: blueviolet;
+            text-align: center;
+            padding: 20px;
+        }
+        div>button{
+            background-color:blue;
+            color: aquamarine;
+            outline: none;
+            border: none;
+            padding: 7px 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 id="display-message">Print Message</h2>
+        <button onclick="printMessage();">Click here</button>
+    </div>
+
+    <!-- Script Code -->
+    <script>
+        function printMessage(){
+            let displayTag=document.getElementById('display-message');
+            displayTag.textContent="Hello World!!!";
+            displayTag.style.color="blue";
+
+        };
+    </script>
+
+</body>
+</html>
+`
