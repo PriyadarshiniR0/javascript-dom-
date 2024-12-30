@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .header{
+            background-color: blueviolet;
+        }
+        #one{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 > Attribute Methods</h1>
+    </div>
+
+<!--Script Code-->
+    <script>
+        let  h1Tag=document.querySelector('h1');
+
+        console.log(h1Tag);
+
+       console.log(h1Tag.hasAttribute('class'));
+
+        console.log(h1Tag.getAttribute('class'));
+
+        h1Tag.setAttribute('id','one');
+
+        
+        h1Tag.removeAttribute('id');   
+    </script>
+    
+</body>
+</html>

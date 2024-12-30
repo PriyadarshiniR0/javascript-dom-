@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web storage</h1>
+
+<!--Script Code-->
+<script>
+    /*let ename="Riya";
+    window.localStorage.setItem("empName",ename);
+
+    let getData=window.localStorage.getItem("empName");
+
+    console.log(getData);
+
+    localStorage.removeItem("empName")*/
+
+    let emps=[{id:1,ename:"Kiran"},{id:2,ename:"Ashok"}];
+    localStorage.setItem("employees",JSON.stringify(emps));
+
+    let getData=JSON.parse(localStorage.getItem("employees"));
+    
+    console.log(getData,typeof getData);
+    
+    
+</script>
+    
+</body>
+</html>
