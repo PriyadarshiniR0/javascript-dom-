@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .one{
+            background-color: blueviolet;
+        }
+        .two{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <h1 class="one">Attribute Methods</h1>
+    </div>
+
+<!--Script Code-->
+    <script>
+        let  h1Tag=document.querySelector('h1');
+
+       console.log(h1Tag.classList);
+        
+        h1Tag.setAttribute('class','two');
+
+       h1Tag.classList.add('two');
+
+       h1Tag.classList.remove('one');
+
+        console.log(h1Tag.classList.contains('one'));
+        
+
+
+        
+        
+        
+    </script>
+    
+</body>
+</html>
